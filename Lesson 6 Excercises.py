@@ -75,7 +75,7 @@ print(50 * "-")
 password = input("Enter a password: ")
 is_longer_than_8 = len(password) > 8
 contains_uppercase = password != password.lower()
-starts_with_letter = password[0].isalpha() if password else False
+starts_with_letter = password[0].isalpha()
 print(f"Is it longer than 8 characters? {is_longer_than_8}")
 print(f"Does it contain an uppercase letter? {contains_uppercase}")
 print(f"Does it start with a letter? {starts_with_letter}")
