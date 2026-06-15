@@ -51,19 +51,25 @@ print(50 * "-")
 
 #Answer Exercise 3
 def analyse_grades(grades):
-    average = sum(grades) / len(grades)
-    highest = max(grades)
-    lowest = min(grades)
-    passed = sum(1 for grade in grades if grade >= 60)
+    if grades == []:
+        print("No grades provided.")
+    else:
+        average = sum(grades) / len(grades)
+        highest = max(grades)
+        lowest = min(grades)
+        passed = sum(1 for grade in grades if grade >= 60)
 
-    print(f"Average: {average:.2f}")
-    print(f"Highest grade: {highest}")
-    print(f"Lowest grade: {lowest}")
-    print(f"Number of students passed: {passed}")
+        print(f"Average: {average:.2f}")
+        print(f"Highest grade: {highest}")
+        print(f"Lowest grade: {lowest}")
+        print(f"Number of students passed: {passed}")
 
 # Example
 grades = [85, 92, 78, 60, 55, 90, 72]
 analyse_grades(grades)
+
+grades_empty = []
+analyse_grades(grades_empty)
 
 print(50 * "-")
 print("""Exercise 4 — Refactor challenge Take this code and refactor it into clean functions 
